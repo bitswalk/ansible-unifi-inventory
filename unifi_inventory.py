@@ -121,7 +121,7 @@ class UnifiInventory:
 
         # Process clients
         for client in self.get_clients():
-            hostname = client.get('ip_address')
+            hostname = client.get('ip')
             is_wired = client.get('is_wired', False)
 
             # Add client-specific variables
