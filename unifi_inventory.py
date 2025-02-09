@@ -121,7 +121,7 @@ class UnifiInventory:
 
         # Process clients
         for client in self.get_clients():
-            hostname = client.get('hostname') or client.get('mac')
+            hostname = client.get('ip_address')
             is_wired = client.get('is_wired', False)
 
             # Add client-specific variables
@@ -129,6 +129,7 @@ class UnifiInventory:
                 'mac_address': client.get('mac'),
                 'ip_address': client.get('ip'),
                 'hostname': client.get('hostname'),
+                'manufacturer': client.get('oui'),
                 'is_wired': is_wired,
                 'last_seen': client.get('last_seen'),
                 'unifi_client': True
