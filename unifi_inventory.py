@@ -130,6 +130,7 @@ class UnifiInventory:
                 'ip_address': client.get('ip'),
                 'hostname': client.get('hostname'),
                 'manufacturer': client.get('oui'),
+                'note': client.get('note'),
                 'is_wired': is_wired,
                 'last_seen': client.get('last_seen'),
                 'unifi_client': True
